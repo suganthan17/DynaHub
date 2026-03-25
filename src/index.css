@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0f;
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+/* ================= PARTICLES ================= */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Neon Glow */
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff;
+  }
+  50% {
+    text-shadow: 0 0 25px #00f5ff, 0 0 50px #00f5ff;
+  }
+}
+
+/* Fade Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Down */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Page Entry */
+@keyframes fadePage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Entry */
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo Glow (RED - matches your dynamite 🔥) */
+@keyframes logoPulse {
+  0%,100% {
+    filter: drop-shadow(0 0 10px rgba(255,60,0,0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(255,60,0,1));
+  }
+}
+
+/* ================= UTIL CLASSES ================= */
+
+.neon-text {
+  animation: neonPulse 2.5s infinite ease-in-out;
+  color: #00f5ff;
+}
+
+.neon-glow {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+.page {
+  animation: fadePage 0.5s ease;
+}
+
+.float-anim {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-btn {
+  animation: fadeInUp 1s ease 0.7s both;
+}
+
+.navbar {
+  animation: slideDown 0.6s ease both;
+}
+
+/* ================= CARDS ================= */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 245, 255, 0.12);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0, 245, 255, 0.5);
+  box-shadow: 0 12px 40px rgba(0, 245, 255, 0.25);
+}
+
+/* Card animation */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFade 0.6s ease forwards;
+}
+
+/* ================= NAV ================= */
+
+.nav-link {
+  position: relative;
+  color: #aaa;
+  transition: 0.3s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00f5ff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00f5ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Bottom nav active */
+.nav-item.active {
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00f5ff;
+}
+
+/* ================= UI POLISH ================= */
+
+/* Cursor */
+a, button {
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f5ff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
