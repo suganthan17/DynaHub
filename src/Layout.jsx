@@ -16,7 +16,6 @@ const navItems = [
   { path: "/software", label: "Software", icon: Monitor },
   { path: "/streaming", label: "Stream", icon: Tv },
   { path: "/tools", label: "Tools", icon: Wrench },
-  { path: "/security", label: "Security", icon: ShieldCheck },
 ]
 
 export default function Layout({ children }) {

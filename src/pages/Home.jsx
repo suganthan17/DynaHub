@@ -36,18 +36,6 @@ const categories = [
     path: "/tools",
     desc: "Dev tools & utilities",
   },
-  {
-    name: "Security",
-    icon: ShieldCheck,
-    path: "/security",
-    desc: "Privacy & protection tools",
-  },
-  {
-    name: "Entertainment",
-    icon: Music2,
-    path: "/entertainment",
-    desc: "Music & creative platforms",
-  },
 ];
 
 export default function Home() {

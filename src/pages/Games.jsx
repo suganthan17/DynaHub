@@ -1,45 +1,51 @@
-import { Gamepad2 } from "lucide-react"
-import CategoryPage from "./CategoryPage"
+import { Gamepad2 } from "lucide-react";
+import CategoryPage from "./CategoryPage";
 
 const items = [
   {
-    name:"Miniclip",
-    url:"https://miniclip.com",
-    desc:"Classic browser games",
-    icon:"https://www.google.com/s2/favicons?sz=64&domain=miniclip.com"
+    name: "Poki",
+    url: "https://poki.com",
+    desc: "Free online games",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=poki.com",
   },
   {
-    name:"Poki",
-    url:"https://poki.com",
-    desc:"Free online games",
-    icon:"https://www.google.com/s2/favicons?sz=64&domain=poki.com"
+    name: "CrazyGames",
+    url: "https://crazygames.com",
+    desc: "Trending browser games",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=crazygames.com",
   },
   {
-    name:"CrazyGames",
-    url:"https://crazygames.com",
-    desc:"Trending games",
-    icon:"https://www.google.com/s2/favicons?sz=64&domain=crazygames.com"
+    name: "FitGirl Repacks",
+    url: "https://fitgirl-repacks.site",
+    desc: "Compressed PC game repacks",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=fitgirl-repacks.site",
   },
   {
-    name:"itch.io",
-    url:"https://itch.io",
-    desc:"Indie games",
-    icon:"https://www.google.com/s2/favicons?sz=64&domain=itch.io"
+    name: "DODI Repacks",
+    url: "https://dodi-repacks.site",
+    desc: "Free PC game repacks",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=dodi-repacks.site",
   },
   {
-    name:"Kongregate",
-    url:"https://kongregate.com",
-    desc:"Community games",
-    icon:"https://www.google.com/s2/favicons?sz=64&domain=kongregate.com"
+    name: "StreamUnlocked",
+    url: "https://streamunlocked.net",
+    desc: "Free game streaming",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=streamunlocked.net",
   },
   {
-    name:"Coolmath Games",
-    url:"https://coolmathgames.com",
-    desc:"Logic games",
-    icon:"https://www.google.com/s2/favicons?sz=64&domain=coolmathgames.com"
+    name: "Richup.io",
+    url: "https://richup.io",
+    desc: "Online Monopoly-style game",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=richup.io",
   },
-]
+  {
+    name: "2048",
+    url: "https://play2048.co",
+    desc: "Classic 2048 puzzle game",
+    icon: "https://www.google.com/s2/favicons?sz=64&domain=play2048.co",
+  },
+];
 
 export default function Games() {
-  return <CategoryPage title="Games" icon={Gamepad2} items={items} />
+  return <CategoryPage title="Games" icon={Gamepad2} items={items} />;
 }
